@@ -15,7 +15,7 @@ class App extends \DI\Bridge\Slim\App
                 $settings = $container->get('database');
 
                 return new \App\Services\Database($settings['dsn']);
-            },
+            }
 
         	'erroHandler' => function (ContainerInterface $container) {
                 return new Handlers\Error();
