@@ -26,7 +26,8 @@ class App extends \DI\Bridge\Slim\App
             },
         ];
 
-        $builder->addDefinitions(APP_ROOT . '/config/development.php');
+        $config = require APP_ROOT . '/config/development.php';
+        $builder->addDefinitions($config);
         $builder->addDefinitions($definitions);
     }
 }
