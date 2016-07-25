@@ -9,7 +9,9 @@ class App extends \DI\Bridge\Slim\App
 {
     protected function configureContainer(ContainerBuilder $builder)
     {
-    	$config = [];
+    	$config = require APP_ROOT . '/config/development.php';
+        $builder->addDefinitions($config);
+
         $definitions = [
             \App\Services\DatabaseInterface::class => function (ContainerInterface $container){
                 $settings = $container->get('database');
@@ -26,8 +28,7 @@ class App extends \DI\Bridge\Slim\App
             },
         ];
 
-        $config = require APP_ROOT . '/config/development.php';
-        $builder->addDefinitions($config);
+        
         $builder->addDefinitions($definitions);
     }
 }
