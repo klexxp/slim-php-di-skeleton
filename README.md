@@ -12,5 +12,7 @@ To make php-di work with slim 3 you need to have slim-bridge (from the PHP-DI pr
 This is where you add your config into the the container and prepare the Objects you want to have injected. I always try to use Interfaces, as this gives me the most flexibilty. If the Object needs other dependencies you just have to define them before and then get them from the container with the full namespace.
 
 ### Resources
+
 [Slim Micro Framwork Documentation](http://www.slimframework.com/docs/)
+
 [PHP-DI](http://php-di.org/)
