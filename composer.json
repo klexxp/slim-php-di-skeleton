@@ -4,10 +4,6 @@
     "type": "library",
     "license": "None",
     "authors": [
-        {
-            "name": "Philipp Klenkhart",
-            "email": "philipp.klenkhart@chello.at"
-        }
     ],
     "minimum-stability": "stable",
     "require": {
